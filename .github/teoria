@@ -1,0 +1,9 @@
+El patrón Observer es un patrón de diseño de comportamiento que te permite definir un mecanismo de suscripción
+para notificar a varios objetos sobre cualquier evento que le suceda al objeto que están observando. En este
+patrón, el sujeto y los observadores están desacoplados, lo que significa que pueden evolucionar de forma
+independiente. Cuando el sujeto experimenta un cambio de estado, notifica a todos sus observadores, permitiéndoles
+realizar las acciones correspondientes en respuesta al evento. Este enfoque favorece la flexibilidad y
+extensibilidad del código, ya que nuevos observadores pueden agregarse sin modificar el sujeto, y viceversa.
+
+una anologia de esto en el mundo real seria subscribirse a un periodico, y ellos, cuando tengan listo
+el numero de ese dia/semana/... te lo llevan
