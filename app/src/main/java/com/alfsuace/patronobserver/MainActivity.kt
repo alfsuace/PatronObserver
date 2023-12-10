@@ -44,6 +44,8 @@ class MainActivity : AppCompatActivity() {
 
         SaveEventManagerUseCase(eventManagerDataRepository)
         SaveEditorUseCase(editorDataRepository)
+
+            //TODO cambios en memoria, volver a guardar
     }
 
 }
