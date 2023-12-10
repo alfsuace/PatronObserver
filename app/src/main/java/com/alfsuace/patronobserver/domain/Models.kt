@@ -6,7 +6,7 @@ data class Editor(
     val contenido: String
 )
 
-data class EventManager(val observers: MutableList<Observer> = mutableListOf()) {
+class EventManager(val observers: MutableList<Observer> = mutableListOf()) {
     fun addObserver(observer: Observer) {
         observers.add(observer)
     }
@@ -19,5 +19,4 @@ data class EventManager(val observers: MutableList<Observer> = mutableListOf()) 
         observers.forEach { it.update(filename) }
     }
 }
-
 

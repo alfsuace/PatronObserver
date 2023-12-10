@@ -13,7 +13,7 @@ class EditorXmlLocalDataSource(
     private val serializer: Serializer
 ) {
 
-    private val sharedPref = context.getSharedPreferences("Resource", Context.MODE_PRIVATE)
+    private val sharedPref = context.getSharedPreferences("Editor", Context.MODE_PRIVATE)
 
     fun saveEditor(editor: Editor): Either<ErrorApp, Boolean> = try {
         sharedPref.edit().apply {
@@ -24,15 +24,14 @@ class EditorXmlLocalDataSource(
         ErrorApp.DataError.left()
     }
 
-    fun getEditor(id: Int): Either<ErrorApp, Editor> = try{
+    fun getEditor(id: Int): Either<ErrorApp, Editor> = try {
         val id: Int = 1
         //vamos a coger siempre el editor cuya id sea siempre 1 para simplificar
         serializer.fromJson(
             sharedPref.getString(id.toString(), null)!!.toString(),
             Editor::class.java
         ).right()
-    } catch (ex: Exception)
-    {
+    } catch (ex: Exception) {
         ErrorApp.DataError.left()
     }
 }

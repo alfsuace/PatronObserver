@@ -13,7 +13,7 @@ class EditorDataRepository(
         return localSource.getEditor(id)
     }
 
-    override suspend fun saveEditor(editor: Editor){
+    override suspend fun saveEditor(editor: Editor) {
         localSource.saveEditor(editor)
     }
 }
